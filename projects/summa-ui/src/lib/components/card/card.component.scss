@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  padding: 10px;
+  border: solid 1px rgb(231, 231, 231);
+  box-shadow: 0px 0px 5px rgb(228, 228, 228);
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+}
+
+:host(.selected) {
+  border: solid 1px orange;
+}
+
+:host(.clicked) {
+  background-color: rgb(91, 221, 58);
+}
+
+:host-context(.disable) {
+  background-color: gainsboro;
+  color: gray;
+  &:hover {
+    transform: none;
+    box-shadow: 0px 0px 5px rgb(228, 228, 228);
+  }
+}

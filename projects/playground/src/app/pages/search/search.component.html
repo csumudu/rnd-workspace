@@ -1,0 +1,21 @@
+<p>search works!</p>
+<div><input type="text" #inpt placeholder="search"></div>
+
+<hr>
+<lib-card title="Results">
+    <div *ngFor="let r of  search.results$|async">{{r.name}}</div>
+</lib-card>
+
+<hr>
+<lib-card>
+    <ng-container *ngIf="search.resultMeta$|async as meta">
+        <span class="page" [ngClass]="{selected:(search.pagination$|async).current === i+1}"
+            *ngFor="let p of [].constructor(meta.numberOfPages);let i=index" (click)="pageChange(i+1);$event.stopPropagation()">{{i+1}}</span>
+    </ng-container>
+
+    {{search.pagination$|async|json}}
+    {{search.resultMeta$|async|json}}
+    <select #pgSize>
+        <option [value]="opt" *ngFor="let opt of pageSizeOpt">{{opt}}</option>
+    </select>
+</lib-card>

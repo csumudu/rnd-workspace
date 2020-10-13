@@ -1,0 +1,16 @@
+<ng-template #default let-tt="tabs">
+    <ul>
+        <li *ngFor="let itm of tt" (click)="onSelect(itm)" [ngClass]="{'selected':(selected|async)==itm}">
+            {{itm.title}}
+        </li>
+    </ul>
+</ng-template>
+
+<div class="tab">
+    <div class="tab-headers">
+        <ng-container *ngTemplateOutlet="tabTemplate || default; context: tabsContext"></ng-container>
+    </div>
+    <div class="tab-s-container">
+        <ng-content></ng-content>
+    </div>
+</div>

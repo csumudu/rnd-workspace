@@ -1,0 +1,12 @@
+.page{
+    display: inline-block;
+    width: 50px;
+    margin: 0px 5px;
+    border: solid 1px #cccccc;
+    text-align: center;
+    padding: 10px;
+
+    &.selected{
+        background-color: orange;
+    }
+}

@@ -1,0 +1,5 @@
+<p>post works!</p>
+
+<button (click)="getAgain()">Load</button>
+
+<div *ngFor="let p of post$|async">{{p.title}}</div>

@@ -1,0 +1,52 @@
+<ng-template #tabHeaders let-t="tabs">
+    <button *ngFor="let x of t" (click)="tbPanel.onSelect(x)">{{x.title}}</button>
+</ng-template>
+
+<h2>Playground</h2>
+<lib-tab-panel [tabTemplate]="tabHeaders" #tbPanel>
+    <lib-tab title="One">
+        <div>
+            One Content
+        </div>
+    </lib-tab>
+    <lib-tab title="Two">
+        <div>
+            Two Content
+        </div>
+    </lib-tab>
+    <lib-tab title="Three">
+        <div>
+            Three Content
+        </div>
+    </lib-tab>
+    <lib-tab title="Four">
+        <div>
+            Four Content
+        </div>
+    </lib-tab>
+
+</lib-tab-panel>
+<br>
+<lib-tab-panel  #tbPanel>
+    <lib-tab title="One">
+        <div>
+            One Content
+        </div>
+    </lib-tab>
+    <lib-tab title="Two">
+        <div>
+            Two Content
+        </div>
+    </lib-tab>
+    <lib-tab title="Three">
+        <div>
+            Three Content
+        </div>
+    </lib-tab>
+    <lib-tab title="Four">
+        <div>
+            Four Content
+        </div>
+    </lib-tab>
+
+</lib-tab-panel>

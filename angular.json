@@ -13,7 +13,7 @@
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/summa-ui/tsconfig.lib.json",
-            "project": "projects/summa-ui/ng-package.json"
+            "project": "projects/summa-ui/ng-package.json",
           },
           "configurations": {
             "production": {
@@ -43,32 +43,32 @@
         }
       }
     },
-    "playgroud": {
+    "playground": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/playgroud",
-      "sourceRoot": "projects/playgroud/src",
+      "root": "projects/playground",
+      "sourceRoot": "projects/playground/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/playgroud",
-            "index": "projects/playgroud/src/index.html",
-            "main": "projects/playgroud/src/main.ts",
-            "polyfills": "projects/playgroud/src/polyfills.ts",
-            "tsConfig": "projects/playgroud/tsconfig.app.json",
-            "aot": true,
+            "outputPath": "dist/playground",
+            "index": "projects/playground/src/index.html",
+            "main": "projects/playground/src/main.ts",
+            "polyfills": "projects/playground/src/polyfills.ts",
+            "tsConfig": "projects/playground/tsconfig.app.json",
+            "aot": false,
             "assets": [
-              "projects/playgroud/src/favicon.ico",
-              "projects/playgroud/src/assets"
+              "projects/playground/src/favicon.ico",
+              "projects/playground/src/assets"
             ],
             "styles": [
-              "projects/playgroud/src/styles.scss"
+              "projects/playground/src/styles.scss"
             ],
             "scripts": []
           },
@@ -76,8 +76,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/playgroud/src/environments/environment.ts",
-                  "with": "projects/playgroud/src/environments/environment.prod.ts"
+                  "replace": "projects/playground/src/environments/environment.ts",
+                  "with": "projects/playground/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -106,33 +106,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "playgroud:build"
+            "browserTarget": "playground:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "playgroud:build:production"
+              "browserTarget": "playground:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "playgroud:build"
+            "browserTarget": "playground:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/playgroud/src/test.ts",
-            "polyfills": "projects/playgroud/src/polyfills.ts",
-            "tsConfig": "projects/playgroud/tsconfig.spec.json",
-            "karmaConfig": "projects/playgroud/karma.conf.js",
+            "main": "projects/playground/src/test.ts",
+            "polyfills": "projects/playground/src/polyfills.ts",
+            "tsConfig": "projects/playground/tsconfig.spec.json",
+            "karmaConfig": "projects/playground/karma.conf.js",
             "assets": [
-              "projects/playgroud/src/favicon.ico",
-              "projects/playgroud/src/assets"
+              "projects/playground/src/favicon.ico",
+              "projects/playground/src/assets"
             ],
             "styles": [
-              "projects/playgroud/src/styles.scss"
+              "projects/playground/src/styles.scss"
             ],
             "scripts": []
           }
@@ -141,9 +141,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/playgroud/tsconfig.app.json",
-              "projects/playgroud/tsconfig.spec.json",
-              "projects/playgroud/e2e/tsconfig.json"
+              "projects/playground/tsconfig.app.json",
+              "projects/playground/tsconfig.spec.json",
+              "projects/playground/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -153,12 +153,12 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/playgroud/e2e/protractor.conf.js",
-            "devServerTarget": "playgroud:serve"
+            "protractorConfig": "projects/playground/e2e/protractor.conf.js",
+            "devServerTarget": "playground:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "playgroud:serve:production"
+              "devServerTarget": "playground:serve:production"
             }
           }
         }

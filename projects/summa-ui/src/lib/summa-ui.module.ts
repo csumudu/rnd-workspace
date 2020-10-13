@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { SummaUiComponent } from './summa-ui.component';
-
-
+import { CommonModule } from '@angular/common';
+import { TabPanelComponent } from './components/sm-tab/tab-panel/tab-panel.component';
+import { TabComponent } from './components/sm-tab/tab/tab.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
-  declarations: [SummaUiComponent],
-  imports: [
-  ],
-  exports: [SummaUiComponent]
+  declarations: [TabPanelComponent, TabComponent, CardComponent],
+  imports: [CommonModule],
+  exports: [TabPanelComponent, TabComponent, CardComponent],
 })
-export class SummaUiModule { }
+export class SummaUiModule {}
