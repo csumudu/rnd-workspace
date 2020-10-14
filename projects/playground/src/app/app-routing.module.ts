@@ -5,6 +5,8 @@ import { PostComponent } from './components/post/post.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ComponentsComponent } from './pages/components/components.component';
 import { SearchComponent } from './pages/search/search.component';
+import { CardComponent } from './pages/components/childrens/card/card.component';
+import { ToggleComponent } from './pages/components/childrens/toggle/toggle.component';
 
 const routes: Routes = [
   {
@@ -22,6 +24,16 @@ const routes: Routes = [
   {
     path: 'components',
     component: ComponentsComponent,
+    children: [
+      {
+        path: 'card',
+        component: CardComponent,
+      },
+      {
+        path: 'toggle',
+        component: ToggleComponent,
+      },
+    ],
   },
   {
     path: 'search',

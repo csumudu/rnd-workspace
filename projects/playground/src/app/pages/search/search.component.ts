@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 import { from, fromEvent, Observable, of } from 'rxjs';
 import { SearchFacadeService } from '../../services/search-facade.service';
-import { map, tap } from 'rxjs/operators';
 import {
   throttleTime,
   debounceTime,

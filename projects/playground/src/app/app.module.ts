@@ -8,7 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ComponentsComponent } from './pages/components/components.component';
-import { SearchComponent } from './pages/search/search.component'
+import { SearchComponent } from './pages/search/search.component';
+import { CardComponent } from './pages/components/childrens/card/card.component';
+import { ToggleComponent } from './pages/components/childrens/toggle/toggle.component'
+import { ToggleCompoundModule } from '../../../summa-ui/src/lib/components/toggle-compound/toggle-compound.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { SearchComponent } from './pages/search/search.component'
     PostComponent,
     DashboardComponent,
     ComponentsComponent,
-    SearchComponent
+    SearchComponent,
+    CardComponent,
+    ToggleComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    SummaUiModule
+    SummaUiModule,
+    ToggleCompoundModule
   ],
   providers: [],
   bootstrap: [AppComponent]

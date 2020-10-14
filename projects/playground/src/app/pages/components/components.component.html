@@ -1,12 +1,6 @@
-<p>components works!</p>
-<lib-card></lib-card>
-<br>
-<lib-card class="selected"></lib-card>
-<br>
-<div class="disable">
-    <lib-card ></lib-card>
-</div>
-<br>
-<div class="diff-title">
-    <lib-card ></lib-card>
-</div>
+<ul>
+    <li *ngFor="let r of links" routerLinkActive="active">
+        <a [routerLink]="[r.path]" >{{r.data.name}}</a>
+    </li>
+</ul>
+<router-outlet></router-outlet>

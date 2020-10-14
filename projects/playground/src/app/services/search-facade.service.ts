@@ -112,9 +112,9 @@ export class SearchFacadeService {
       pagination: {
         ...this.store.value.pagination,
         current:
-          pagination.pageSize > this.store.value.pagination.pageSize
+          +pagination.pageSize > this.store.value.pagination.pageSize
             ? 1
-            : this.store.value.pagination.pageSize,
+            : this.store.value.pagination.current,
         ...pagination,
       },
     });

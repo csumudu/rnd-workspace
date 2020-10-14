@@ -1,0 +1,17 @@
+<h2>toggle</h2>
+
+<h3>Simple Toggle</h3>
+<lib-toggle [on]="state" (toggle)="onToggle($event)"></lib-toggle>
+
+<br>
+
+<button (click)="clickHandler()">toggle</button>
+
+<h3>Compound Toggle</h3>
+<lib-toggle-compound [on]="state" (toggle)="onToggle($event)">
+    <lib-toggle-on></lib-toggle-on>
+    <lib-toggle-button></lib-toggle-button>
+    <lib-toggle-off></lib-toggle-off>
+</lib-toggle-compound>
+<br>
+<button (click)="clickHandler()">toggle</button>

@@ -7,3 +7,17 @@
     }
   }
 }
+
+ul {
+  list-style: none;
+  li {
+    display: inline-block;
+    margin: 2px 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+    &.active {
+      background-color: orange;
+    }
+  }
+}
