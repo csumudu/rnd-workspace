@@ -9,3 +9,4 @@ export * from './lib/components/card/card.component';
 export * from './lib/components/toggle/toggle.component';
 export * from './lib/components/toggle-compound/toggle-compound.component';
 export * from './lib/components/toggle-compound';
+export * from './lib/components/toggle-compound-with-di';

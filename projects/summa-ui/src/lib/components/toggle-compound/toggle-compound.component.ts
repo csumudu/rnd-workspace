@@ -27,6 +27,10 @@ export class ToggleCompoundComponent implements OnInit, AfterContentInit {
     this.inptStream$.next(val);
   }
 
+  get on() {
+    return this.inptStream$.getValue();
+  }
+
   @Output()
   toggle: EventEmitter<boolean> = new EventEmitter();
 
@@ -48,7 +52,7 @@ export class ToggleCompoundComponent implements OnInit, AfterContentInit {
       this.button.on = v;
       this.offComp.on = v;
       this.onComp.on = v;
-      this.toggle.emit(v)
+      this.toggle.emit(v);
     });
 
     this.button.toggle.subscribe((v) => {

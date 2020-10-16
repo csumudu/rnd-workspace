@@ -1,0 +1,7 @@
+<p>css-grid</p>
+<ul>
+    <li *ngFor="let r of links" routerLinkActive="active">
+        <a [routerLink]="[r.path]">{{r.data.name}}</a>
+    </li>
+</ul>
+<router-outlet></router-outlet>

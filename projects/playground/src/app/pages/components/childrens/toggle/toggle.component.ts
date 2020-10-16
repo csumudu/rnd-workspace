@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToggleComponent implements OnInit {
   public state = true;
+  public diState = true;
 
   constructor() {}
 
@@ -20,5 +21,14 @@ export class ToggleComponent implements OnInit {
   clickHandler() {
     this.state = !this.state;
     console.log(this.state);
+  }
+
+  clickHandlerDi(): void {
+    this.diState = !this.diState;
+    console.log(this.diState);
+  }
+
+  diHandler(e) {
+    this.diState = e;
   }
 }

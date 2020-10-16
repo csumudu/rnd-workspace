@@ -7,6 +7,10 @@ import { ComponentsComponent } from './pages/components/components.component';
 import { SearchComponent } from './pages/search/search.component';
 import { CardComponent } from './pages/components/childrens/card/card.component';
 import { ToggleComponent } from './pages/components/childrens/toggle/toggle.component';
+import { CssGridComponent } from './pages/css-grid/css-grid.component';
+import { CenteringComponent } from './pages/css-grid/centering/centering.component';
+import { BlocksComponent } from './pages/css-grid/blocks/blocks.component';
+import { DynamicComponent } from './pages/dynamic/dynamic.component';
 
 const routes: Routes = [
   {
@@ -38,6 +42,24 @@ const routes: Routes = [
   {
     path: 'search',
     component: SearchComponent,
+  },
+  {
+    path: 'dynamic',
+    component: DynamicComponent,
+  },
+  {
+    path: 'grid',
+    component: CssGridComponent,
+    children: [
+      {
+        path: 'center',
+        component: CenteringComponent,
+      },
+      {
+        path: 'blocks',
+        component: BlocksComponent,
+      },
+    ],
   },
   {
     path: '',

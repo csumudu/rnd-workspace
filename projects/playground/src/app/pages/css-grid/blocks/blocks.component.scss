@@ -1,0 +1,15 @@
+:host{
+    display: grid;
+    grid-template-columns: repeat(5,100px);
+    row-gap: 20px;
+    column-gap: 20px;
+    border: solid 1px gray;
+    padding: 20px;
+    div{
+        display: grid;
+        border: solid 2px green;
+        border-radius: 5px;
+        place-content: center;
+        height: 100px;
+    }
+}

@@ -15,3 +15,16 @@
 </lib-toggle-compound>
 <br>
 <button (click)="clickHandler()">toggle</button>
+
+<h3>
+    Toggle component with Dependancy Injection
+</h3>
+<lib-toggle-compound-with-di [on]="diState" (toggle)="diHandler($event)">
+    <lib-toggle-di-off></lib-toggle-di-off>
+    <lib-toggle-di-off></lib-toggle-di-off>
+    <lib-toggle-di-button></lib-toggle-di-button>
+    <lib-toggle-di-on></lib-toggle-di-on>
+</lib-toggle-compound-with-di>
+
+
+<button (click)="clickHandlerDi()">toggle</button> : {{diState}}

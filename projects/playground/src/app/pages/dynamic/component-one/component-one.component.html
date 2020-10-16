@@ -1,0 +1,10 @@
+<p>component-one works!</p>
+<ng-component *ngIf="(movie$|async) as m; else empty">
+    <img [src]="m.medium_cover_image" />
+    {{m.title_english}}
+    {{m|json}}
+</ng-component>
+
+<ng-template #empty>
+    <div>No records</div>
+</ng-template>
