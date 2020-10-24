@@ -1,0 +1,11 @@
+<button class="btn btn-primary m-1" #up>Add Task</button>
+<button class="btn btn-primary m-1" #down>Remove Task</button>
+<br>
+<br>
+Task Count : {{taskCount$|async|json}}
+<br>
+<br>
+
+<div class="spinner-border" role="status" *ngIf="showLoading$|async">
+    <span class="sr-only">Loading...</span>
+</div>

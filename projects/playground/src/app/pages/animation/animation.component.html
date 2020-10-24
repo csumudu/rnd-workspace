@@ -1,0 +1,9 @@
+<p>animation works!</p>
+<button (click)="onToggle()">show</button>
+<br>
+
+<div class="para" @toggleEffect *ngIf="isVisible">
+    I am Hidden
+</div>
+
+<div class="para" @toggleEffect  *ngFor="let x of [].constructor(10);let d = index">{{d}}</div>
